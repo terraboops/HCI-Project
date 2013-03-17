@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <% pageTitle = data.page.title || "A Club For CIS Students at MRU" %>
+    <title><%= "CIS3 @ MRU | #{pageTitle}" %></title>
+    
+    <%= stylesheet_link_tag "normalize", "all" %>
+    <%= javascript_include_tag  "all" %>
+  </head>
+  
+  <body class="<%= page_classes %>">
+    <%= yield %>
+  </body>
+</html>
