@@ -1,4 +1,107 @@
 /*
  *= require bootstrap
  *= require bootstrap-responsive
+ *= require font-awesome
  */
+
+ #header-top span a{
+ 	display: block;
+ 	margin: 10px;
+ }
+
+ #header-top h1 {
+ 	font-size: 112px;
+ 	line-height: 118px;
+ 	margin: 0;
+ 	font: "Helvetica", "Arial", sans-serif;
+ }
+
+#landing {
+	width: 564px;
+	margin: auto;
+}
+
+#landing > div.flip-container {
+	float: left;
+}
+
+#cta {
+	margin-top: 15px;
+}
+#cta img {
+	margin: 15px;
+}
+#cta > div {
+	background-color: #eee;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+
+.flip-container {
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	perspective: 1000;
+	margin: 3px;
+	border: 1px solid #ddd;
+}
+
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+	width: 180px;
+	height: 180px;
+	text-align: center;
+}
+
+.flipper {
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+
+	-moz-transition: 0.6s;
+	-moz-transform-style: preserve-3d;
+
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+	font-size: 24px;
+}
+
+.front, .back {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.front {
+	z-index: 2;
+	line-height: 180px;
+	background: #eee;
+}
+
+.front:hover {
+	text-decoration: none;
+}
+
+.back {
+	background: #444;
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+	line-height: 205px;
+	color: white;
+	font-size: 14px;
+}
+
+.back:hover, .back:focus {
+	color: white;
+}
+

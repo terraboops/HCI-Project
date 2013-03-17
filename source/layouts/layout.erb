@@ -3,14 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <% pageTitle = data.page.title || "A Club For CIS Students at MRU" %>
     <title><%= "CIS3 @ MRU | #{pageTitle}" %></title>
     
     <%= stylesheet_link_tag "normalize", "all" %>
+    <!--[if IE 7]>
+      <link rel="stylesheet" href="stylesheets/font-awesome-ie7.min.css">
+    <![endif]-->
     <%= javascript_include_tag  "all" %>
   </head>
   
   <body class="<%= page_classes %>">
-    <%= yield %>
+    <div class="container">
+      <div id="header-top">
+        <a href="/"><H1 class="pull-left">CIS3</H1></a>
+        <span class="pull-right">
+          <a class="btn btn-primary btn-large" href="#">Login</a>
+          <a class="btn btn-primary btn-large" href="#">Register</a>
+        </span>
+      </div>
+      <div class="clearfix"></div>
+      <%= yield %>
+    </div>
   </body>
 </html>

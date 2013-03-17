@@ -1,3 +1,38 @@
 ---
 title: Home
 ---
+<nav id="landing">
+	<% data.site.top_level_pages.each do |page| %>
+		<%= partial("partials/nav_item", :locals => {:nav => page}) %>
+	<% end %>
+</nav>
+<div class="clearfix"></div>
+<div class="row-fluid" id="cta">
+	<div class="span4 text-center">
+		<h2>This is a thing</h2>
+		<img src="http://placehold.it/300x200" />
+		<ul class="text-left">
+			<li>Something awesome about the thing</li>
+			<li>A thing which is even more awesome</li>
+			<li>Something else awesome</li>
+		</ul>
+	</div>
+	<div class="span4 text-center">
+		<h2>This is another thing</h2>
+		<img src="http://placehold.it/300x200" />
+		<ul class="text-left">
+			<li>Something awesome about the thing</li>
+			<li>A thing which is even more awesome</li>
+			<li>Something else awesome</li>
+		</ul>
+	</div>
+	<div class="span4 text-center">
+		<h2>Not a thing.</h2>
+		<img src="http://placehold.it/300x200" />
+		<ul class="text-left">
+			<li>Something awesome about the thing</li>
+			<li>A thing which is even more awesome</li>
+			<li>Something else awesome</li>
+		</ul>
+	</div>
+</div>

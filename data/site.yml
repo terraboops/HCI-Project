@@ -1,0 +1,31 @@
+top_level_pages:
+  -
+    title: Events
+    link: /events.html
+    css: events
+    icon: icon-calendar
+  -
+    title: Blog
+    link: /blog.html
+    css: blog
+    icon: icon-book
+  -
+    title: Info
+    link: /info.html
+    css: info
+    icon: icon-info-sign
+  -
+    title: Contact
+    link: /contact.html
+    css: contact
+    icon: icon-envelope-alt
+  -
+    title: Jobs
+    link: /jobs.html
+    css: jobs
+    icon: icon-briefcase
+  -
+    title: Team
+    link: /team.html
+    css: team
+    icon: icon-user
