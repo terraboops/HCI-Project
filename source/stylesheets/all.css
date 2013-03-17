@@ -30,6 +30,7 @@
 }
 #cta img {
 	margin: 15px;
+	width: 80%;
 }
 #cta > div {
 	background-color: #eee;
