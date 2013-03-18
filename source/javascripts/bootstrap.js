@@ -1,3 +1,4 @@
+//= require "jquery-1.9.1"
 /* ===================================================
  * bootstrap-transition.js v2.3.1
  * http://twitter.github.com/bootstrap/javascript.html#transitions

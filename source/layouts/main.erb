@@ -1,0 +1,25 @@
+<% wrap_layout :layout do %>
+	<nav class="navbar">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</a>
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<% data.site.top_level_pages.each do |page| %>
+							<% if current_page.url == page.link %>
+								<li class="active"><a href="#"><%= page.title %></a></li>
+							<% else %>
+								<li><a href="<%= page.link %>"><%= page.title %></a></li>	      			
+							<% end %>
+						<% end %>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+<%= yield %>
+<% end %>
