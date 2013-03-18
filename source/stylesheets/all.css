@@ -60,7 +60,8 @@ margin-left: 10%;
 	right: 10%;
 }
 #cta ul {
-	margin-top: 10%;
+	width: 80%;
+	margin: 10% auto;
 }
 
 #photostream {
@@ -157,9 +158,6 @@ margin-left: 10%;
 @media (max-width: 979px) and (min-width: 768px) {
 	#cta h2 {
 		font-size: 28px;
-	}
-	#cta ul {
-		width: 80%;
 	}
 }
 	/*Larger*/
