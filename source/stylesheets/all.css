@@ -8,11 +8,9 @@
  	padding: 10px;
  	background-image: url("../images/body-grad.png");
  }
-
  h1, h2, h3 {
  	font-family: "Helvetica", "Arial", sans-serif;
  }
-
  p {
  	font-family: 'Droid Sans Mono', sans-serif;
  }
@@ -22,14 +20,13 @@
  }
 
  #header-top span {
- 	margin-right: 9%;
+ 	margin-right: 8%;
  }
- 
  #header-top span a{
  	display: block;
  	margin: 10px;
+ 	padding: 11px 34px;
  }
-
  #header-top h1 {
  	font-size: 112px;
  	line-height: 118px;
@@ -41,7 +38,6 @@
 	margin: auto;
 	margin-top: 50px;
 }
-
 #landing > div.flip-container {
 	float: left;
 }
@@ -65,6 +61,18 @@ margin-left: 10%;
 }
 #cta ul {
 	margin-top: 10%;
+}
+
+#photostream {
+	z-index: -10;
+	position: absolute;
+	top: 150px;
+	width: 100%;
+	height: 476px;
+	background-image: url("http://placehold.it/3000x476");
+	background-position: right;
+	opacity:0.05;
+	filter:alpha(opacity=5);
 }
 /******************3d Flip Animation******************/
 .flip-container {
@@ -138,12 +146,14 @@ margin-left: 10%;
 .back:hover, .back:focus {
 	color: white;
 }
-/*****************Tablet and Larger*******************/
-@media (min-width: 768px) {
-	#cta > div {
-		min-height: 440px;
-	} 
+/*************Tablet / Smaller Desktop****************/
+@media (max-width: 1200px) {
+	img {
+		width: 80%;
+	}
 }
+
+/*****************Tablet and Larger*******************/
 @media (max-width: 979px) and (min-width: 768px) {
 	#cta h2 {
 		font-size: 28px;
@@ -152,15 +162,21 @@ margin-left: 10%;
 		width: 80%;
 	}
 }
-/*************Tablet / Smaller Desktop****************/
-@media (min-width: 768px) and (max-width: 1200px) {
-	img {
-		width: 80%;
+	/*Larger*/
+@media (max-width: 979px) {
+	#photostream {
+		display: none;
 	}
 }
+	/*Smaller*/
+@media (min-width: 768px) {
+	#cta > div {
+		min-height: 440px;
+	} 
+}	
+
 /******** Landscape Phone / Portrait Tablet **********/
 @media (max-width: 767px) {
-
 	.flip-container, .front, .back {
 		width: 130px;
 		height: 130px;
