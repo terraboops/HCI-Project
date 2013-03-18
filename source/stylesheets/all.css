@@ -69,10 +69,10 @@ margin-left: 10%;
 	top: 150px;
 	width: 100%;
 	height: 476px;
-	background-image: url("http://placehold.it/3000x476");
+	background-image: url("../images/photostream.jpg");
 	background-position: right;
-	opacity:0.05;
-	filter:alpha(opacity=5);
+	opacity:0.04;
+	filter:alpha(opacity=4);
 }
 /******************3d Flip Animation******************/
 .flip-container {
