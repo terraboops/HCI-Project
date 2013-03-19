@@ -1,37 +1,43 @@
 /*
- *= require bootstrap
- *= require bootstrap-responsive
- *= require font-awesome
- */
- /****************Custom Stylez****************/
- body {
- 	padding: 10px 0;
- 	background-image: url("../images/body-grad.png");
- }
- h1, h2, h3 {
- 	font-family: "Helvetica", "Arial", sans-serif;
- }
- p {
- 	font-family: 'Droid Sans Mono', sans-serif;
- }
+*= require bootstrap
+*= require bootstrap-responsive
+*= require font-awesome
+*/
+/****************Custom Stylez****************/
+body {
+	padding: 10px 0;
+	background-image: url("../images/body-grad.png");
+	background-repeat: repeat-x;
+}
+h1, h2, h3 {
+	font-family: "Helvetica", "Arial", sans-serif;
+}
 
- .push-down {
- 	margin-top: 50px;
- }
+.push-down {
+	margin-top: 50px;
+}
 
- #header-top span {
- 	margin-right: 8%;
- }
- #header-top span a{
- 	display: block;
- 	margin: 10px;
- 	padding: 11px 34px;
- }
- #header-top h1 {
- 	font-size: 112px;
- 	line-height: 118px;
- 	margin: 0;
- }
+#header-top span {
+	margin-right: 8%;
+}
+#header-top span a{
+	display: block;
+	margin: 10px;
+	padding: 11px 34px;
+}
+#header-top h1 {
+	font-size: 112px;
+}
+#header-top h2 {
+	font-size: 72px;
+	color: #0f7ba7;
+	opacity:0.80;
+	filter:alpha(opacity=80);
+}
+#header-top h1, h2 {
+	line-height: 118px;
+	margin: 0;
+}
 
 #landing {
 	width: 564px;
@@ -46,7 +52,7 @@
 	margin-top: 75px;
 }
 #cta img {
-margin-left: 10%;
+	margin-left: 10%;
 }
 #cta > div {
 	background-color: #eee;
@@ -60,9 +66,16 @@ margin-left: 10%;
 	right: 10%;
 }
 #cta ul {
-	width: 80%;
+	width: 70%;
 	margin: 10% auto;
- 	font-family: 'Droid Sans Mono'
+}
+
+#cta .well {
+	width: 80%;
+	margin: auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding-bottom: 41px;
 }
 
 #photostream {
@@ -146,115 +159,115 @@ margin-left: 10%;
 }
 
 .back:hover, .back:focus {
-	color: white;
+contentolor: white;
 }
 /*************Tablet / Smaller Desktop****************/
 @media (max-width: 1200px) {
-	img {
-		width: 80%;
-	}
+img {
+	width: 80%;
+}
 }
 
 /*****************Tablet and Larger*******************/
 @media (max-width: 979px) and (min-width: 768px) {
-	#cta h2 {
-		font-size: 28px;
-	}
+#cta h2 {
+	font-size: 28px;
 }
-	/*Larger*/
+}
+/*Larger*/
 @media (max-width: 979px) {
-	#photostream {
-		display: none;
-	}
+#photostream {
+	display: none;
 }
-	/*Smaller*/
+}
+/*Smaller*/
 @media (min-width: 768px) {
-	#cta > div {
-		min-height: 440px;
-	} 
+#cta > div {
+	min-height: 440px;
+} 
 }	
 
 /******** Landscape Phone / Portrait Tablet **********/
 @media (max-width: 767px) {
-	.flip-container, .front, .back {
-		width: 130px;
-		height: 130px;
-	}
+.flip-container, .front, .back {
+	width: 130px;
+	height: 130px;
+}
 
-	#landing {
-		width: 420px;
-	}
+#landing {
+	width: 420px;
+}
 
-	.front {
-		line-height: 130px;
-		font-size: 20px;
-	}
-	.back {
-		line-height: 150px;
-		font-size: 10px;
-	}
-	#cta img {
-		margin: 0;
-		width: 80%;
-	}
+.front {
+	line-height: 130px;
+	font-size: 20px;
+}
+.back {
+	line-height: 150px;
+	font-size: 10px;
+}
+#cta img {
+	margin: 0;
+	width: 80%;
+}
 
-	#cta .btn {
-		width: 75%;
-		margin: 15px;
-	}
+#cta .btn {
+	width: 75%;
+	margin: 15px;
+}
 
-	#cta ul {
-		width: 75%;
-		margin: auto;
-		margin-top: 20px;
-		margin-bottom: 20px;
-	}
+#cta ul {
+	width: 75%;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
 
-	#cta > div.span4 {
-		margin-bottom: 25px;
-		text-align: center;
-	}
+#cta > div.span4 {
+	margin-bottom: 25px;
+	text-align: center;
+}
 
-	#cta > div.span4, #cta .btn {
-		position: inherit;
-	}
+#cta > div.span4, #cta .btn {
+	position: inherit;
+}
 
 }
 /**********************Phone************************/
 @media (max-width: 480px) {
 
-	#header-top > span{
-		margin: 0;
-	}
-	#header-top * {
-		float:none;
-		text-align: center;
-	}
+#header-top > span{
+	margin: 0;
+}
+#header-top * {
+	float:none;
+	text-align: center;
+}
 
-	.flip-container, .front, .back {
-		width: 130px;
-		height: 50px;
-	}
+.flip-container, .front, .back {
+	width: 130px;
+	height: 50px;
+}
 
-	#landing {
-		width: 276px;
-		margin: auto;
-		margin-top: 50px;
-	}
+#landing {
+	width: 276px;
+	margin: auto;
+	margin-top: 50px;
+}
 
-	.front {
-		line-height: 50px;
-		font-size: 20px;
-	}
-	.back {
-		line-height: 70px;
-		font-size: 8px;
-	}
-	#cta > div.span4 {
-		margin-bottom: 25px;
-	}
-	#cta > div.span4, #cta .btn {
-		position: inherit;
-	}
+.front {
+	line-height: 50px;
+	font-size: 20px;
+}
+.back {
+	line-height: 70px;
+	font-size: 8px;
+}
+#cta > div.span4 {
+	margin-bottom: 25px;
+}
+#cta > div.span4, #cta .btn {
+	position: inherit;
+}
 
 }
