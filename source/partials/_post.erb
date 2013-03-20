@@ -2,7 +2,7 @@
 	<h1><%= lorem.words(4).split(/(\W)/).map(&:capitalize).join %></h1>
 	<span class="date"><%= Date.new(Date.today.year, Date.today.month, rand(28)+1) %></span>
 	<span class="author">El Presidente</span>
-	<img src="<%=lorem.image('300x225', :random_color => true)%>" />
+	<img class="thumbnail" src="<%=lorem.image('300x225', :random_color => true)%>" />
 	<% for i in 1..5 %>
 	<p><%= lorem.paragraph %></p>
 	<% end %>

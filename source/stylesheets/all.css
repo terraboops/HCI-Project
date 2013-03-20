@@ -51,8 +51,12 @@ h1, h2, h3 {
 #cta {
 	margin-top: 75px;
 }
+#cta h2 {
+	line-height: 70px;
+}
 #cta img {
-	margin-left: 10%;
+	margin-left: 5%;
+	width: 88%;
 }
 #cta > div {
 	background-color: #eee;
@@ -67,7 +71,7 @@ h1, h2, h3 {
 }
 #cta ul {
 	width: 70%;
-	margin: 10% auto;
+	margin: 10% 10%;
 }
 #cta .well {
 	width: 80%;
@@ -139,6 +143,7 @@ td.event a {
 
 #blog article img {
 	float: right;
+	margin: 5px;
 }
 
 /******************3d Flip Animation******************/
