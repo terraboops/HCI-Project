@@ -12,11 +12,11 @@ body {
 h1, h2, h3 {
 	font-family: "Helvetica", "Arial", sans-serif;
 }
-
 .push-down {
 	margin-top: 50px;
 }
 
+/***************** Headers *****************/
 #header-top span {
 	margin-right: 8%;
 }
@@ -38,7 +38,7 @@ h1, h2, h3 {
 	line-height: 118px;
 	margin: 0;
 }
-
+/***************** Landing Page *****************/
 #landing {
 	width: 564px;
 	margin: auto;
@@ -69,7 +69,6 @@ h1, h2, h3 {
 	width: 70%;
 	margin: 10% auto;
 }
-
 #cta .well {
 	width: 80%;
 	margin: auto;
@@ -89,6 +88,59 @@ h1, h2, h3 {
 	opacity:0.04;
 	filter:alpha(opacity=4);
 }
+/***************** Events *****************/
+table {
+	font-size: 45px;
+	margin-left: 16%;
+	margin-bottom: 20px;
+}
+.dayOfWeek {
+	color: #555;
+}
+thead th{
+	height: 55px;
+}
+th, td {
+	text-align: center;
+	height: 105px;
+	width: 105px;
+	border: 1px solid white;
+}
+td.event {
+	background-color: #0f7ba7;
+	border: 1px solid #ccc;
+}
+td.event a {
+	color: white;
+	text-decoration: none;
+}
+
+/***************** Blogs *****************/
+#blog article {
+	position: relative;
+}
+#blog article .author, #blog article .date {
+	position: absolute;
+	right: 20px;
+}
+
+#blog article .author {
+	top: 47px;
+}
+
+#blog article .date {
+	top: 30px;
+}
+
+#blog article p {
+	margin: 14px;
+	text-indent: 50px;
+}
+
+#blog article img {
+	float: right;
+}
+
 /******************3d Flip Animation******************/
 .flip-container {
 	-webkit-perspective: 1000;

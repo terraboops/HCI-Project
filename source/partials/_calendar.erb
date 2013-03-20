@@ -1,0 +1,44 @@
+<% 
+	calendarDate = Date.new(Date.today.year,Date.today.month, 1)
+	currentMonth = calendarDate.month
+	offset = calendarDate.cwday
+%>
+<table>
+	<thead>
+		<tr>
+			<th colspan="7"><%= calendarDate.strftime("%B") %></th><%# Full Month Name %>
+		</tr>
+		<tr>
+			<% for day in ["Mon","Tue", "Wed", "Thur", "Fri", "Sat", "Sun"] %>
+			<th class="dayOfWeek"><%= day %></th>
+			<% end %>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<% for i in 1..(offset-1) #make spacers for unused days%>
+				<td></td>
+			<% end %>
+			<% for i in offset..7 #enter the remainder of week 1%>
+				<td><%=calendarDate.day%></td>
+				<% calendarDate = calendarDate + 1 %>
+			<% end %>
+		</tr>
+		<% until calendarDate.month != currentMonth #only enter current month %>
+			<tr>
+				<% for i in 1..7 #loop through each day of the week %>
+					<% if calendarDate.month == currentMonth %>
+						<% if calendarDate.day % (rand(20)+1) == 0 %>
+						<td class="event"><a href="#"><%=calendarDate.day%></a></td>
+						<% else %>
+						<td><%=calendarDate.day%></td>
+						<% end %>
+					<% else %> <%# if we're out of the current month, put in spacers %>
+						<td></td>
+					<% end %>
+					<% calendarDate = calendarDate + 1 %>
+				<% end %>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
