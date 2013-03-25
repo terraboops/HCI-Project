@@ -1,7 +1,8 @@
 (function ($) {
 
 	$(document).ready(function (){
-		window.setInterval(animationLoop, 100, 1);
+		animationLoop(0.01);
+		window.setInterval(animationLoop, 1, 1000, 1000);
 	});
 	function animationLoop(deltaX, deltaY){
 		if (typeof deltaX === "undefined")
@@ -14,13 +15,15 @@
 		}
 		var element = document.getElementById('photostream');
 		var position = window.getComputedStyle(element).getPropertyValue('background-position').split(' ');
-		var pattern = /[0-9]+/;
-		var x = window.parseInt(pattern.exec(position[0]),10);
-		var y = window.parseInt(pattern.exec(position[1]),10);
+		var pattern = /[0-9\.]+/;
+		var x = window.parseFloat(pattern.exec(position[0]));
+		var y = window.parseFloat(pattern.exec(position[1]));
 		var xUnit = position[0].split(pattern)[1];
 		var yUnit = position[1].split(pattern)[1];
 		x = x + deltaX;
 		y = y + deltaY;
 		element.style.backgroundPosition =x+xUnit+" "+y+yUnit;
+		console.log(x+xUnit+" "+y+yUnit);
+		console.log(element.style.backgroundPosition);
 	};
 })(window.jQuery);
