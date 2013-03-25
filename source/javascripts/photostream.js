@@ -1,9 +1,6 @@
-(function ($) {
-
-	$(document).ready(function (){
-		animationLoop(0.01);
-		window.setInterval(animationLoop, 1, 1000, 1000);
-	});
+(function () {
+	animationLoop(0.01);
+	window.setInterval(animationLoop, 10, 0.01);
 	function animationLoop(deltaX, deltaY){
 		if (typeof deltaX === "undefined")
 		{
@@ -23,7 +20,5 @@
 		x = x + deltaX;
 		y = y + deltaY;
 		element.style.backgroundPosition =x+xUnit+" "+y+yUnit;
-		console.log(x+xUnit+" "+y+yUnit);
-		console.log(element.style.backgroundPosition);
 	};
-})(window.jQuery);
+})();
