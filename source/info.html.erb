@@ -2,3 +2,6 @@
 layout: main
 title: Info
 ---
+<% data.site.info_pages.each do |page|  %>
+  <%= partial("partials/nav_item", :locals => { :nav => page })  %>
+<% end %>
