@@ -218,9 +218,6 @@ td.event a {
 	font-size: 14px;
 }
 
-.back:hover, .back:focus {
-contentolor: white;
-}
 /*************Tablet / Smaller Desktop****************/
 @media (max-width: 1200px) {
 img {
