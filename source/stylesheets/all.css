@@ -156,23 +156,17 @@ td.event1 {
 	background-color: #6ac612;
 }
 
-/***************** Info *****************/
-.info {
-    float: left;
-}
-.info, .info .front, .info .back  {
-    width: 30px;
-    height: 30px;
-}
-.info span {
-    position: relative;
-    top: 39%;
-    line-height: 20px;
+.events #blog {
+	margin-top: 5%;
 }
 
 /***************** Blogs *****************/
-#blog {
+.blog #blog {
 	margin: 0;
+	width: 80%;
+}
+#blog img {
+
 }
 #blog article {
 	position: relative;
@@ -197,17 +191,30 @@ td.event1 {
 
 #blog article img {
 	float: right;
-	margin: 5px;
+	width: 300px;
+	margin: auto;	
 }
 
 #sidebar {
 	border-radius: 5px;
 	border: 1px solid #e3e3e3;
 	background-color:#f5f5f5;
-	height: 1000px;
+	/*height: 1000px;*/
 	padding: 10px;
 	margin: 0;
+	margin-top: 60px;
 }
+
+/************************Info************************/
+#infoNav {
+	width: 525px;
+	float:right;
+}
+
+#infoPic {
+	float: left;
+}
+
 
 /******************3d Flip Animation******************/
 .flip-container {
@@ -279,119 +286,197 @@ td.event1 {
 	font-size: 14px;
 }
 
+/***************** Info 3-d Flippers *****************/
+.info .flip-container{
+    float: right;
+}
+.info .flip-container, .info .front, .info .back  {
+    width: 250px;
+    height: 250px;
+}
+
+.info .front {
+	line-height: 250px;
+}
+.info .front span {
+	display: block;
+	padding: 5px;
+}
+.info .back {
+	line-height: 300px;
+	font-size: 24px;
+}
 /*************Tablet / Smaller Desktop****************/
 @media (max-width: 1200px) {
-img {
-	width: 80%;
-}
-table {
-	font-size: 30px;
-}
+	#infoNav, #infoPic {
+		float: none;
+		margin: auto;
+	}
+	#infoPic {
+		width: 475px;
+	}
+	#infoPic img {
+		display: none;
+	}
+	.index img {
+		width: 80%;
+	}
+	table {
+		font-size: 30px;
+	}
 }
 
 /*****************Tablet and Larger*******************/
 @media (max-width: 979px) and (min-width: 768px) {
-#cta h2 {
-	font-size: 28px;
-}
-}
-/*Larger*/
-@media (max-width: 979px) {
-#photostream {
-	display: none;
-}
-#calendar {
-	display: none;
-}
-}
-/*Smaller*/
-@media (min-width: 768px) {
-#cta > div {
-	min-height: 440px;
-} 
+	#cta h2 {
+		font-size: 28px;
+	}
+	}
+	/*Larger*/
+	@media (max-width: 979px) {
+	#photostream {
+		display: none;
+	}
+	#calendar {
+		display: none;
+	}
+	}
+	/*Smaller*/
+	@media (min-width: 768px) {
+	#cta > div {
+		min-height: 440px;
+	} 
 }	
 
 /******** Landscape Phone / Portrait Tablet **********/
 @media (max-width: 767px) {
-.flip-container, .front, .back {
-	width: 130px;
-	height: 130px;
+
+	.blog #blog {
+		width: 100%;
+		margin-top: 20px;
+	}
+	#sidebar {
+		margin: 0;
+	}
+	.flip-container, .front, .back {
+		width: 130px;
+		height: 130px;
+	}
+
+	#landing {
+		width: 420px;
+	}
+
+	.front {
+		line-height: 130px;
+		font-size: 20px;
+	}
+	.back {
+		line-height: 150px;
+		font-size: 10px;
+	}
+	#cta img {
+		margin: 0;
+		width: 80%;
+	}
+
+	#cta .btn {
+		width: 75%;
+		margin: 15px;
+	}
+
+	#cta ul {
+		width: 75%;
+		margin: auto;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	#cta > div.span4 {
+		margin-bottom: 25px;
+		text-align: center;
+	}
+
+	#cta > div.span4, #cta .btn {
+		position: inherit;
+	}
+
+	#blog article h1 {
+		font-size: 28px
+	}
+
 }
 
-#landing {
-	width: 420px;
+
+/**********************Info Menu************************/
+@media (max-width: 550px) {
+	#infoNav {
+		width: 100%;
+		text-align: center;
+	}
+	.info .flip-container {
+		float: none;
+		display: inline-block;
+	}
+	.info .flip-container, .info .front, .info .back {
+		width: 180px;
+		height: 50px;
+	}
+
+	.info .front {
+		line-height: 50px;
+		font-size: 18px;
+		font-weight: bolder;
+	}
+	.info .back {
+		line-height: 70px;
+		font-size: 8px;
+	}
 }
 
-.front {
-	line-height: 130px;
-	font-size: 20px;
-}
-.back {
-	line-height: 150px;
-	font-size: 10px;
-}
-#cta img {
-	margin: 0;
-	width: 80%;
-}
-
-#cta .btn {
-	width: 75%;
-	margin: 15px;
-}
-
-#cta ul {
-	width: 75%;
-	margin: auto;
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-
-#cta > div.span4 {
-	margin-bottom: 25px;
-	text-align: center;
-}
-
-#cta > div.span4, #cta .btn {
-	position: inherit;
-}
-
-}
 /**********************Phone************************/
 @media (max-width: 480px) {
+	#blog article img {
+		float: none;
+		margin-top: 10px;
+	}
+	#blog article .author, #blog article .date {
+		position: static;
+		display: block;
+	}
+	#header-top > span{
+		margin: 0;
+	}
+	#header-top * {
+		float:none;
+		text-align: center;
+	}
 
-#header-top > span{
-	margin: 0;
-}
-#header-top * {
-	float:none;
-	text-align: center;
-}
+	.flip-container, .front, .back {
+		width: 130px;
+		height: 50px;
+	}
 
-.flip-container, .front, .back {
-	width: 130px;
-	height: 50px;
-}
+	.front {
+		line-height: 50px;
+		font-size: 20px;
+	}
+	.back {
+		line-height: 70px;
+		font-size: 8px;
+	}
 
-#landing {
-	width: 276px;
-	margin: auto;
-	margin-top: 50px;
-}
+	#landing {
+		width: 276px;
+		margin: auto;
+		margin-top: 50px;
+	}
 
-.front {
-	line-height: 50px;
-	font-size: 20px;
-}
-.back {
-	line-height: 70px;
-	font-size: 8px;
-}
-#cta > div.span4 {
-	margin-bottom: 25px;
-}
-#cta > div.span4, #cta .btn {
-	position: inherit;
-}
+	#cta > div.span4 {
+		margin-bottom: 25px;
+	}
+	#cta > div.span4, #cta .btn {
+		position: inherit;
+	}
 
 }

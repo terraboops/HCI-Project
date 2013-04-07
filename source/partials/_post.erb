@@ -1,5 +1,5 @@
 <article class="well">
-	<h1><a href="#"><%= lorem.words(4).split(/(\W)/).map(&:capitalize).join %></a></h1>
+	<h1><a href="#"><%= lorem.words(3).split(/(\W)/).map(&:capitalize).join %></a></h1>
 	<span class="date"><%= Date.new(Date.today.year, Date.today.month, rand(28)+1) %></span>
 	<span class="author">El Presidente</span>
 	<img class="thumbnail" src="<%=lorem.image('300x225', :random_color => true)%>" />

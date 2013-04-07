@@ -2,13 +2,8 @@
 layout: main
 title: Blog
 ---
-<div id="blog" class="span10 pull-left">
-<% for i in 1..5 %>
-	<%= partial "partials/post" %>
-<% end %>
-</div>
 <div id="sidebar" class="span2 pull-right">
-	<h3>By Date</h3>
+	<h4>By Date</h4>
 	<ul>
 		<li><a href="#">2013</a>
 			<ul>
@@ -21,17 +16,22 @@ title: Blog
 		<li><a href="#">2012</a></li>
 		<li><a href="#">2011</a></li>
 	</ul>
-	<h3>By Category</h3>
+	<h4>By Category</h4>
 	<ul>
 		<li><a href="#">Info</a></li>
 		<li><a href="#">Event</a></li>
 		<li><a href="#">Student</a></li>
 	</ul>
-	<h3>Popular Posts</h3>
+	<h4>Popular Posts</h4>
 	<ul>
 		<li><a href="#">Agrium Job</a></li>
 		<li><a href="#">LAN Party</a></li>
 		<li><a href="#">Wow! Fun time event place!</a></li>
 	</ul>
-
+</div>
+<div id="blog" class="span10 pull-left">
+<h3>Recent Entries</h3>
+<% for i in 1..5 %>
+	<%= partial "partials/post" %>
+<% end %>
 </div>

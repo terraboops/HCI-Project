@@ -2,6 +2,19 @@
 layout: main
 title: Info
 ---
-<% data.site.info_pages.each do |page|  %>
-  <%= partial("partials/nav_item", :locals => { :nav => page })  %>
+<h3><%= data.page.title %></h3>
+<div id="infoPic">
+	<img class="thumbnail" src="<%= lorem.image('475x500', :background_color => 'abc') %>" alt="<%= lorem.words 2 %>" />
+</div>
+<div id="infoNav">
+	<% data.site.info_pages.each do |page|  %>
+	  <%= partial("partials/nav_item", :locals => { :nav => page })  %>
+	<% end %>
+</div>
+<div class="clearfix"></div>
+<h3>Recent Info Posts</h3>
+<div id="blog">
+<% for i in 1..5 %>
+	<%= partial "partials/post" %>
 <% end %>
+</div>
