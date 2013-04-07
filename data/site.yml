@@ -29,3 +29,24 @@ top_level_pages:
     link: /team.html
     css: team
     icon: icon-user
+info_pages:
+  -
+    title: Tips &amp; Advice
+    link: /info/tips.html
+    css: info tips
+    icon: icon-h-sign
+  -
+    title: About CIS3
+    link: /info/about.html
+    css: info about
+    icon: icon-info-sign
+  -
+    title: Work Term Info
+    link: /info/workterm.html
+    css: info workterm
+    icon: icon-briefcase
+  -
+    title: BCIS Advising Info
+    link: /info/advising.html
+    css: info advising
+    icon: icon-lightbulb

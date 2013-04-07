@@ -156,6 +156,20 @@ td.event1 {
 	background-color: #6ac612;
 }
 
+/***************** Info *****************/
+.info {
+    float: left;
+}
+.info, .info .front, .info .back  {
+    width: 30px;
+    height: 30px;
+}
+.info span {
+    position: relative;
+    top: 39%;
+    line-height: 20px;
+}
+
 /***************** Blogs *****************/
 #blog {
 	margin: 0;
@@ -265,9 +279,6 @@ td.event1 {
 	font-size: 14px;
 }
 
-.back:hover, .back:focus {
-contentolor: white;
-}
 /*************Tablet / Smaller Desktop****************/
 @media (max-width: 1200px) {
 img {
