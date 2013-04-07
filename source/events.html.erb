@@ -2,4 +2,11 @@
 layout: main
 title: Events
 ---
-<%= partial "partials/calendar" %>
+<div id="calendar">
+	<%= partial "partials/calendar" %>
+</div>
+<div id="blog">
+<% for i in 1..5 %>
+	<%= partial "partials/post" %>
+<% end %>
+</div>

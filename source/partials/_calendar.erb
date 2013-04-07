@@ -6,7 +6,9 @@
 <table>
 	<thead>
 		<tr>
-			<th colspan="7"><%= calendarDate.strftime("%B") %></th><%# Full Month Name %>
+			<th colspan="2"><span class="legendEmployer"></span><p>Employer Event</p></th>
+			<th colspan="3"><%= calendarDate.strftime("%B") %></th><%# Full Month Name %>
+			<th colspan="2"><span class="legendCIS3"></span><p>CIS3 Event</p></th>
 		</tr>
 		<tr>
 			<% for day in ["Mon","Tue", "Wed", "Thur", "Fri", "Sat", "Sun"] %>
@@ -28,10 +30,12 @@
 			<tr>
 				<% for i in 1..7 #loop through each day of the week %>
 					<% if calendarDate.month == currentMonth %>
-						<% if calendarDate.day % (rand(20)+1) == 0 %>
+						<% if (noise = calendarDate.day % (rand(19)+1)) == 0 %>
 						<td class="event"><a href="#"><%=calendarDate.day%></a></td>
+						<% elsif noise == 1 %>
+						<td class="event1"><a href="#"><%=calendarDate.day%></a></td>
 						<% else %>
-						<td><%=calendarDate.day%></td>
+						<td><%= calendarDate.day%></td>
 						<% end %>
 					<% else %> <%# if we're out of the current month, put in spacers %>
 						<td></td>
