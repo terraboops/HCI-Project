@@ -9,7 +9,7 @@ layout: main
 	</div>
 	<div class="clearfix"></div>
 	<article class="information">
-		<%= image_tag lorem.image('350x400'), :class => 'pull-left thumbnail'%>
+		<%= image_tag lorem.image('350x400', :random_color => true), :class => 'pull-left thumbnail'%>
 		<% 10.times do %>
 			<p><%= lorem.paragraph %></p>
 		<% end %>

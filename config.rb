@@ -48,7 +48,11 @@
 # end
 
 data.info.each do |site|
-  proxy "/info/#{site.url}.html", "/info/template.html", :locals => { :site => site }, :ignore => true
+  proxy "#{site.url}", "/info/template.html", :locals => { :site => site }, :ignore => true
+end
+
+data.blog.each do |site|
+  proxy "#{site.url}", "/blog/template.html", :locals => { :site => site }, :ignore => true
 end
 
 set :css_dir, 'stylesheets'

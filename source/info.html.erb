@@ -18,7 +18,10 @@ title: Info
 <div class="clearfix"></div>
 <h3>Recent Info Posts</h3>
 <div id="blog">
-<% for i in 1..5 %>
+<% data.info.each do |post| %>
+	<%= partial "partials/post", :locals => {:post => post} %>
+<% end %>
+<% for i in 1..2 %>
 	<%= partial "partials/post" %>
 <% end %>
 </div>

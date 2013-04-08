@@ -1,0 +1,18 @@
+---
+layout: main
+---
+<%= partial "partials/sidebar" %>
+<div id="blog" class="span10 pull-left">
+<h3><%= site.title %></h3>
+<article class="well">
+	<div class="pull-right" style="text-align: right; margin: 10px; color: #dd4814;">
+		<h4><%= site.date %></h4>
+		<h4><%= site.author %></h4>
+	</div>
+	<div class="clearfix"></div>
+	<%= image_tag lorem.image("400x500", :random_color => true), :class => 'thumbnail' %>
+	<% for i in 1..15 %>
+	<p><%=lorem.paragraph%></p>
+	<% end %>
+</article>
+</div>

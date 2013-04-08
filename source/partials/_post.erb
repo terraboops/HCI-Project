@@ -1,7 +1,22 @@
+<%
+	class Post
+		attr_accessor :url
+		attr_accessor :title
+		attr_accessor :date
+		attr_accessor :author
+	end
+	if(!defined?post)
+		post = Post.new
+		post.url = "#"
+		post.title = lorem.words(3).split(/(\W)/).map(&:capitalize).join
+		post.date = Date.new(Date.today.year, Date.today.month, rand(28)+1)
+		post.author = "El Presidente"
+	end
+%>
 <article class="well">
-	<h1><a href="#"><%= lorem.words(3).split(/(\W)/).map(&:capitalize).join %></a></h1>
-	<span class="date"><%= Date.new(Date.today.year, Date.today.month, rand(28)+1) %></span>
-	<span class="author">El Presidente</span>
+	<h1><a href="<%= post.url %>"><%= post.title %></a></h1>
+	<span class="date"><%= post.date %></span>
+	<span class="author"><%= post.author %></span>
 	<img class="thumbnail" src="<%=lorem.image('300x225', :random_color => true)%>" />
 	<% for i in 1..5 %>
 	<p><%= lorem.paragraph %></p>
