@@ -185,14 +185,15 @@ td.event1 {
 }
 
 #blog article p {
+	font-size: 15px;
 	margin: 14px;
-	text-indent: 50px;
+	text-indent: 30px;
 }
 
 #blog article img {
 	float: right;
 	width: 300px;
-	margin: auto;	
+	margin: auto;
 }
 
 #sidebar {
@@ -203,6 +204,57 @@ td.event1 {
 	padding: 10px;
 	margin: 0;
 	margin-top: 60px;
+}
+/***************** Contact *****************/
+#contactInfo {
+	width: 800px;
+	margin: auto;
+}
+#contactInfo dl {
+	width: 300px;
+}
+#contactInfo dt:after {
+	content: ":";
+}
+
+#contactInfo dt {
+	float: left;
+	width: 90px;
+}
+
+#message {
+	width: 99%;
+	height: 300px;
+	margin: auto;
+}
+
+.contact form {
+	margin: 10px 0;
+}
+
+.contact form input[type=submit]{
+	border-radius: 5px;
+	background-color: #eee;
+	margin-top: 10px;
+	padding: 10px;
+	font-size: 24px;
+}
+
+/***************** Team *****************/
+
+.round {
+	border-radius: 100%;
+}
+
+.team img {
+	margin-right: 20px;
+	padding-bottom: 30px;
+}
+
+.team p {
+	font-size: 16px;
+	line-height: 22px;
+	text-indent: 40px;
 }
 
 /******************Single Blog Page******************/
