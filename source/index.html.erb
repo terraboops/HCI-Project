@@ -1,8 +1,10 @@
 ---
 title: Home
-photostream: true
-js: 'landing'
 ---
+<% content_for :assets do %>
+	<%= javascript_include_tag 'photostream' %>
+	<%= javascript_include_tag 'landing' %>
+<% end %>
 <hr/>
 <nav id="landing">
 	<% data.site.top_level_pages.each do |page| %>
@@ -49,3 +51,4 @@ js: 'landing'
 		<a class="btn btn-primary btn-large">CTA</a>
 	</div>
 </div>
+<div id="photostream"></div>

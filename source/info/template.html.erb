@@ -1,0 +1,18 @@
+---
+layout: main
+---
+<div class="well">
+	<h3 class="pull-left"><%= site.title %></h3>
+	<div class="breadcrumb pull-right">
+		<a href="/info.html">Info</a>
+		<%= image_tag 'breadcrumb.png', :class=> 'pull-left' %><p><%= site.title %></p>
+	</div>
+	<div class="clearfix"></div>
+	<article class="information">
+		<%= image_tag lorem.image('350x400'), :class => 'pull-left thumbnail'%>
+		<% 10.times do %>
+			<p><%= lorem.paragraph %></p>
+		<% end %>
+	</article>
+	<div class="clearfix"></div>
+</div>

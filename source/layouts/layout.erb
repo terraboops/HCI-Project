@@ -26,12 +26,6 @@
       <div class="clearfix"></div>
       <%= yield %>
     </div>
-    <% if current_page.data.photostream %>
-      <div id="photostream"></div>
-      <%= javascript_include_tag 'photostream' %>
-    <% end %>
-    <% if current_page.data.js %>
-      <%= javascript_include_tag 'landing' %>
-    <% end %>
+    <%= yield_content :assets %>
   </body>
 </html>

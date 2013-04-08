@@ -7,6 +7,10 @@ title: Info
 	<img class="thumbnail" src="<%= lorem.image('475x500', :background_color => 'def', :text => 'Meaningful Image') %>" alt="<%= lorem.words 5 %>" />
 </div>
 <div id="infoNav">
+	<%# 
+		This is absolutely horrid now that I've decoupled the blog pages into YAML files.
+		These nav items are really just important info post... Will turn into array later.
+	 %>
 	<% data.site.info_pages.each do |page|  %>
 	  <%= partial("partials/nav_item", :locals => { :nav => page })  %>
 	<% end %>

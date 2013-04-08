@@ -47,6 +47,10 @@
 #   end
 # end
 
+data.info.each do |site|
+  proxy "/info/#{site.url}.html", "/info/template.html", :locals => { :site => site }, :ignore => true
+end
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'
