@@ -28,9 +28,11 @@ title: Contact
 	<fieldset>
 		<form>
 			<label for="name">Name</label>
-			<input id="name" />
+			<input type="text" id="name" />
 			<label for="subject">Subject</label>
-			<input id="subject" />
+			<input type="text" id="subject" />
+			<%= image_tag lorem.image("300x150", :text => "Captcha"), :class => "captcha" %>
+			<div class="spacer"></div>
 			<label for="message">Message</label>
 			<textarea id="message"></textarea>
 			<input type="submit" value="Send" />
