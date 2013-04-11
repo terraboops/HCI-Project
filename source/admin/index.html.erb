@@ -1,0 +1,5 @@
+<% data.site.admin_pages.each do |page| %>
+<div class="pull-left well" style="width: 250px; height: 250px; margin: 20px; line-height: 250px; text-align: center;">
+	<a href="<%= page.url %>" style="font-size: 24px;">Manage <%= page.title %></a>
+</div>
+<% end %>
