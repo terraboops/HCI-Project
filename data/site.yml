@@ -1,52 +1,71 @@
 top_level_pages:
   -
-    title: Events
-    link: /events.html
-    css: events
-    icon: icon-calendar
+    title: "Events"
+    link: "/events.html"
+    css: "events"
+    icon: "icon-calendar"
   -
-    title: Blog
-    link: /blog.html
-    css: blog
-    icon: icon-book
+    title: "Blog"
+    link: "/blog.html"
+    css: "blog"
+    icon: "icon-book"
   -
-    title: Info
-    link: /info.html
-    css: infoMain
-    icon: icon-info-sign
+    title: "Info"
+    link: "/info.html"
+    css: "infoMain"
+    icon: "icon-info-sign"
   -
-    title: Contact
-    link: /contact.html
-    css: contact
-    icon: icon-envelope-alt
+    title: "Contact"
+    link: "/contact.html"
+    css: "contact"
+    icon: "icon-envelope-alt"
   -
-    title: Jobs
-    link: /jobs.html
-    css: jobs
-    icon: icon-briefcase
+    title: "Jobs"
+    link: "/jobs.html"
+    css: "jobs"
+    icon: "icon-briefcase"
   -
-    title: Team
-    link: /team.html
-    css: team
-    icon: icon-user
+    title: "Team"
+    link: "/team.html"
+    css: "team"
+    icon: "icon-user"
 info_pages:
   -
-    title: Tips &amp; Advice
-    link: /info/tips.html
-    css:  tips
-    icon: icon-h-sign
+    title: "Tips &amp; Advice"
+    link: "/info/tips.html"
+    css:  "tips"
+    icon: "icon-h-sign"
   -
-    title: About CIS3
-    link: /info/about.html
-    css:  about
-    icon: icon-info-sign
+    title: "About CIS3"
+    link: "/info/about.html"
+    css:  "about"
+    icon: "icon-info-sign"
   -
-    title: Work Term Info
-    link: /info/workterm.html
-    css:  workterm
-    icon: icon-briefcase
+    title: "Work Term Info"
+    link: "/info/workterm.html"
+    css:  "workterm"
+    icon: "icon-briefcase"
   -
-    title: BCIS Advising Info
-    link: /info/advising.html
-    css:  advising
-    icon: icon-lightbulb
+    title: "BCIS Advising Info"
+    link: "/info/advising.html"
+    css:  "advising"
+    icon: "icon-lightbulb"
+admin_pages:
+  -
+    title: "Mailing List"
+    url: "/admin/manage/mail.html"
+    note: false
+    columns: 2
+    sendEmail: true
+  -
+    title: "Jobs"
+    url: "/admin/manage/jobs.html"
+    note: "You can only manage your own Jobs."
+    columns: 3
+    sendEmail: false
+  -
+    title: "Events"
+    url: "/admin/manage/events.html"
+    note: "Users can only manage events that they have access to."
+    columns: 3
+    sendEmail: false

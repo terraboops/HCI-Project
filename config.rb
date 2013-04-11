@@ -45,7 +45,11 @@ helpers do
   def calendarTableCell (calendarDate, dates, noise=nil)
     cell = "<td></td>"
     if dates.include?(calendarDate)
-      cell = '<td class="event"><a href="/events/lanparty.html">' + calendarDate.day.to_s + '</a></td>'
+      if calendarDate.day == 20 #this is what not giving a shit looks like.
+        cell = '<td class="event1"><a href="/events/lanparty.html">' + calendarDate.day.to_s + '</a></td>'
+      else
+        cell = '<td class="event"><a href="/events/thetao.html">' + calendarDate.day.to_s + '</a></td>'
+      end
     else
       if noise == 0
         cell = '<td class="event"><a href="#">' + calendarDate.day.to_s + '</a></td>'
@@ -76,6 +80,10 @@ end
 
 data.jobs.currentStudents.each do |site|
   proxy "#{site.url}", "/jobs/template.html", :locals => { :site => site }, :ignore => true
+end
+
+data.site.admin_pages.each do |site|
+  proxy "#{site.url}", "/admin/manage/template.html", :locals => { :site => site }, :ignore => true
 end
 
 set :css_dir, 'stylesheets'

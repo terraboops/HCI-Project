@@ -96,17 +96,17 @@ h1, h2, h3 {
 	filter:alpha(opacity=15);
 }
 /***************** Events *****************/
-table {
+.events table {
 	margin: auto;
 	font-size: 45px;
 }
-th, td, table {
+.events th, .events td, .events table {
 	border: 1px solid #ccc;
 }
-thead th{
+.events thead th{
 	height: 55px;
 }
-th, td {
+.events th, .events td {
 	height: 105px;
 	width: 105px;
 }

@@ -8,8 +8,9 @@ layout: main
 	</div>
 	<h3><%= site.title %></h3>
 	<div class="eventInfo">
-		<h4>Date: <em><%= site.job.time %></em></h4>
-		<h4>Location: <em><%= site.job.title %></em></h4>
+		<h4>Job Period: <em><%= site.job.time %></em></h4>
+		<h4>Job Title:&nbsp;&nbsp;&nbsp; <em><%= site.job.title %></em></h4>
+		<%# that's right, I used a &nbsp;! DEAL WITH IT %>
 	</div>
 	<div class="clearfix"></div>
 	<% for i in 1..15 %>
