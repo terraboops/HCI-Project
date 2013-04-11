@@ -70,6 +70,13 @@ data.events.each do |site|
   proxy "#{site.url}", "/events/template.html", :locals => { :site => site }, :ignore => true
 end
 
+data.jobs.alumni.each do |site|
+  proxy "#{site.url}", "/jobs/template.html", :locals => { :site => site }, :ignore => true
+end
+
+data.jobs.currentStudents.each do |site|
+  proxy "#{site.url}", "/jobs/template.html", :locals => { :site => site }, :ignore => true
+end
 
 set :css_dir, 'stylesheets'
 

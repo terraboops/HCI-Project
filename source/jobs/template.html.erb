@@ -1,0 +1,18 @@
+---
+layout: main
+---
+<article class="well information">
+	<div class="breadcrumb pull-right">
+		<a href="/jobs.html">Jobs</a>
+		<%= image_tag 'breadcrumb.png', :class=> 'pull-left' %><p><%= site.title %></p>
+	</div>
+	<h3><%= site.title %></h3>
+	<div class="eventInfo">
+		<h4>Date: <em><%= site.job.time %></em></h4>
+		<h4>Location: <em><%= site.job.title %></em></h4>
+	</div>
+	<div class="clearfix"></div>
+	<% for i in 1..15 %>
+	<p><%=lorem.paragraph%></p>
+	<% end %>
+</article>
