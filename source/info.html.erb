@@ -3,10 +3,10 @@ layout: main
 title: Info
 ---
 <h3><%= data.page.title %></h3>
-<div id="infoPic">
+<div id="infoPic" class="pull-left">
 	<img class="thumbnail" src="<%= lorem.image('475x500', :background_color => 'def', :text => 'Meaningful Image') %>" alt="<%= lorem.words 5 %>" />
 </div>
-<div id="infoNav">
+<div id="infoNav" class="pull-right">
 	<%# 
 		This is absolutely horrid now that I've decoupled the blog pages into YAML files.
 		These nav items are really just important info post... Will turn into array later.

@@ -2,7 +2,13 @@
 	calendarDate = Date.new(Date.today.year,Date.today.month, 1)
 	currentMonth = calendarDate.month
 	offset = calendarDate.cwday
+	dates = [];
+	
+	data.events.each do |event|
+		dates << event.date
+	end
 %>
+<h3><%= dates.include?(Date.new(Date.today.year, Date.today.month, 20)) %></h3>
 <table>
 	<thead>
 		<tr>
@@ -22,7 +28,7 @@
 				<td></td>
 			<% end %>
 			<% for i in offset..7 #enter the remainder of week 1%>
-				<td><%=calendarDate.day%></td>
+				<%= calendarTableCell(calendarDate, dates) %>
 				<% calendarDate = calendarDate + 1 %>
 			<% end %>
 		</tr>
@@ -30,13 +36,7 @@
 			<tr>
 				<% for i in 1..7 #loop through each day of the week %>
 					<% if calendarDate.month == currentMonth %>
-						<% if (noise = calendarDate.day % (rand(19)+1)) == 0 %>
-						<td class="event"><a href="#"><%=calendarDate.day%></a></td>
-						<% elsif noise == 1 %>
-						<td class="event1"><a href="#"><%=calendarDate.day%></a></td>
-						<% else %>
-						<td><%= calendarDate.day%></td>
-						<% end %>
+						<%= calendarTableCell(calendarDate, dates) %>
 					<% else %> <%# if we're out of the current month, put in spacers %>
 						<td></td>
 					<% end %>

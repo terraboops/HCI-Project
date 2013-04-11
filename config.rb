@@ -41,11 +41,22 @@
 # activate :automatic_image_sizes
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do 
+  def calendarTableCell (calendarDate, dates, noise=nil)
+    cell = "<td></td>"
+    if dates.include?(calendarDate)
+      cell = '<td class="event"><a href="/events/lanparty.html">' + calendarDate.day.to_s + '</a></td>'
+    else
+      if noise == 0
+        cell = '<td class="event"><a href="#">' + calendarDate.day.to_s + '</a></td>'
+      elsif noise == 1
+        cell = '<td class="event1"><a href="#">' + calendarDate.day.to_s + '</a></td>'
+      else
+        cell = '<td>' + calendarDate.day.to_s + '</td>'
+      end
+    end
+  end
+end
 
 data.info.each do |site|
   proxy "#{site.url}", "/info/template.html", :locals => { :site => site }, :ignore => true
@@ -54,6 +65,11 @@ end
 data.blog.each do |site|
   proxy "#{site.url}", "/blog/template.html", :locals => { :site => site }, :ignore => true
 end
+
+data.events.each do |site|
+  proxy "#{site.url}", "/events/template.html", :locals => { :site => site }, :ignore => true
+end
+
 
 set :css_dir, 'stylesheets'
 

@@ -7,7 +7,10 @@ title: Events
 </div>
 <div id="blog">
 <h3>Recent Events</h3>
-<% for i in 1..5 %>
+<% data.events.each do |post| %>
+	<%= partial "partials/post", :locals => {:post => post} %>
+<% end %>
+<% for i in 1..2 %>
 	<%= partial "partials/post" %>
 <% end %>
 </div>

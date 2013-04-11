@@ -165,9 +165,7 @@ td.event1 {
 	margin: 0;
 	width: 80%;
 }
-#blog img {
 
-}
 #blog article {
 	position: relative;
 }
@@ -297,14 +295,15 @@ article.information img {
 	margin-top: 0;
 }
 
+/************************Single Event************************/
+.eventInfo em {
+	color: #dd4814;
+	font-style: normal;
+}
+
 /************************Info************************/
 #infoNav {
 	width: 525px;
-	float:right;
-}
-
-#infoPic {
-	float: left;
 }
 
 

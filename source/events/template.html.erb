@@ -1,0 +1,19 @@
+---
+layout: main
+---
+<article class="well information">
+	<div class="breadcrumb pull-right">
+		<a href="/events.html">Events</a>
+		<%= image_tag 'breadcrumb.png', :class=> 'pull-left' %><p><%= site.title %></p>
+	</div>
+	<h3><%= site.title %></h3>
+	<div class="eventInfo">
+		<h4>Date: <em><%= site.date %></em></h4>
+		<h4>Location: <em><%= site.location %></em></h4>
+	</div>
+	<div class="clearfix"></div>
+	<%= image_tag lorem.image("400x500", :random_color => true), :class => 'thumbnail pull-left' %>
+	<% for i in 1..15 %>
+	<p><%=lorem.paragraph%></p>
+	<% end %>
+</article>
