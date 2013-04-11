@@ -2,4 +2,20 @@
 layout: main
 title: Jobs
 ---
-<h3>Jobs</h3>
+<h1>Jobs</h1>
+<h2>Current Students</h2>
+<div class="well">
+	<% data.jobs.currentStudents.each do |post| %>
+		<%= partial('partials/job_tile', :locals => {:post => post}) %>
+	<% end %>
+	<div class="clearfix"></div>
+</div>
+<a href="#">Browse all jobs for Current Students...</a>
+<h2>Alumni Jobs</h2>
+<div class="well">
+	<% data.jobs.alumni.each do |post| %>
+		<%= partial('partials/job_tile', :locals => {:post => post}) %>
+	<% end %>
+	<div class="clearfix"></div>
+</div>
+<a href="#">Browse all jobs for Alumni...</a>

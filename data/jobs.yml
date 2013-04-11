@@ -1,16 +1,38 @@
--
-  title: "About CIS3"
-  url: about
-  date: 2013-04-20
--
-  title: "Tips &amp; Advice"
-  url: tips
-  date: 2013-05-08
--
-  title: "BCIS Advising Info"
-  url: advising
-  date: 2012-09-01
--
-  title: "Work Term Info"
-  url: workterm
-  date: 2012-09-01
+currentStudents:
+  -
+    title: "Agrium"
+    url: "/jobs/agrium.html"
+    job:
+      time: "Summer Work"
+      title: "Peon"
+  -
+    title: "AHS"
+    url: "/jobs/ahs.html"
+    job:
+      time: "Summer Work"
+      title: "Health Peon"
+  -
+    title: "Fake Inc"
+    url: "/jobs/fake.html"
+    job:
+      time: "Summer Work"
+      title: "Fake Peon"
+alumni:
+  -
+    title: "MassiveWeb"
+    url: "/jobs/massive.html"
+    job:
+      time: "Full Time"
+      title: "Senior Developer"
+  -
+    title: "Acme Inc."
+    url: "/jobs/acme.html"
+    job:
+      time: "Summer Work"
+      title: "Anvil Developer"
+  -
+    title: "Monsters Inc."
+    url: "/jobs/monster.html"
+    job:
+      time: "Full Time"
+      title: "Monster"

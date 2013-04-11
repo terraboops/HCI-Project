@@ -301,6 +301,26 @@ article.information img {
 	font-style: normal;
 }
 
+/************************Jobs************************/
+.jobTile {
+	width: 350px;
+	margin: 5px;
+}
+
+.jobs .well {
+	padding: 10px;
+}
+
+.jobTile {
+	min-height: 350px;
+	max-height: 350px;
+	overflow: hidden;
+}
+
+.jobTile img {
+	margin: 10px;
+}
+
 /************************Info************************/
 #infoNav {
 	width: 525px;
