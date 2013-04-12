@@ -18,6 +18,10 @@ h1, h2, h3 {
 	margin-top: 50px;
 }
 
+.error {
+	border: 2px solid red !important;
+}
+
 /***************** Headers *****************/
 #header-top span {
 	margin-right: 8%;
