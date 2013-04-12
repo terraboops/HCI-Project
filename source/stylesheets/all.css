@@ -22,6 +22,11 @@ h1, h2, h3 {
 	border: 2px solid red !important;
 }
 
+.contact iframe {
+	width: 80%;
+	margin: auto;
+}
+
 /***************** Headers *****************/
 #header-top span {
 	margin-right: 8%;
@@ -423,6 +428,9 @@ article.information img {
 }
 /*************Tablet / Smaller Desktop****************/
 @media (max-width: 1200px) {
+	.jobTile {
+		width: 45%;
+	}
 	#infoNav, #infoPic {
 		float: none;
 		margin: auto;
@@ -465,6 +473,18 @@ article.information img {
 
 /******** Landscape Phone / Portrait Tablet **********/
 @media (max-width: 767px) {
+	.jobTile {
+		width: 95%;
+	}
+	.contact .well {
+		display: none;
+	}
+
+	#contactInfo dl {
+		float: none;
+		width: 30%;
+		margin: 20px 25%;
+	}
 
 	.blog #blog {
 		width: 100%;
@@ -523,6 +543,12 @@ article.information img {
 }
 
 
+/**********************Job Post Tiles************************/
+@media (max-width: 550px) {
+	.jobTile {
+		width: 91%;
+	}
+}
 /**********************Info Menu************************/
 @media (max-width: 550px) {
 	#infoNav {
@@ -551,6 +577,11 @@ article.information img {
 
 /**********************Phone************************/
 @media (max-width: 480px) {
+
+	#contactInfo dl {
+		margin: 20px;
+		margin-left: 80px;
+	}
 	#blog article img {
 		float: none;
 		margin-top: 10px;
